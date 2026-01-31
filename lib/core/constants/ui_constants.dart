@@ -1,4 +1,4 @@
-import 'package:iti_flutter/core/utils/app_images.dart';
+import 'package:iti_flutter/core/resources/app_images.dart';
 import 'package:iti_flutter/features/home/data/models/item_model.dart';
 
 abstract class UiConstants {

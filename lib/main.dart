@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:iti_flutter/cart_app.dart';
+import 'package:iti_flutter/e_commerce_app.dart';
 import 'package:iti_flutter/core/db/db_constants.dart';
 import 'package:iti_flutter/features/cart/data/models/cart_item_model.dart';
 import 'package:iti_flutter/features/home/data/models/item_model.dart';

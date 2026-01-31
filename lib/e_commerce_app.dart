@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iti_flutter/core/resources/app_colors.dart';
-import 'package:iti_flutter/cubits/app_cubit.dart';
+import 'package:iti_flutter/core/cubits/app_cubit.dart';
 import 'package:iti_flutter/features/home/presentation/views/home_view.dart';
 
 class ECommerceApp extends StatelessWidget {
