@@ -18,6 +18,7 @@ class CustomAuthTextField extends StatelessWidget {
     this.prefixIcon,
     this.initialValue,
     this.textColor = AppColors.blackColor,
+    this.autovalidateMode,
   });
 
   final String hintText;
@@ -33,10 +34,12 @@ class CustomAuthTextField extends StatelessWidget {
   final Widget? prefixIcon;
   final String? initialValue;
   final Color textColor;
+  final AutovalidateMode? autovalidateMode;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      autovalidateMode: autovalidateMode,
       style: TextStyle(
         color: textColor,
         fontSize: 16,
