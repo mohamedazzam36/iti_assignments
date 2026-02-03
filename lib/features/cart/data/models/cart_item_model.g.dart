@@ -38,7 +38,5 @@ class CartItemModelAdapter extends TypeAdapter<CartItemModel> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is CartItemModelAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
+      other is CartItemModelAdapter && runtimeType == other.runtimeType && typeId == other.typeId;
 }

@@ -1,11 +1,13 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:iti_flutter/core/resources/app_colors.dart';
-import 'package:iti_flutter/features/home/data/models/item_model.dart';
+import 'package:iti_flutter/features/home/data/models/product_model.dart';
 
 class CustomItemWidget extends StatefulWidget {
   const CustomItemWidget({super.key, required this.item});
 
-  final ItemModel item;
+  final ProductModel item;
 
   @override
   State<CustomItemWidget> createState() => _CustomItemWidgetState();
@@ -21,28 +23,29 @@ class _CustomItemWidgetState extends State<CustomItemWidget> {
           alignment: Alignment.topRight,
           children: [
             Card(
-              child: Image.asset(
-                widget.item.imagePath,
+              child: Image.network(
+                widget.item.thumbnail!,
                 height: 220,
               ),
             ),
-            IconButton(
-              onPressed: () async {
-                widget.item.isFav = !widget.item.isFav;
-                await widget.item.save();
-                setState(() {});
-              },
-              icon: widget.item.isFav
-                  ? const Icon(Icons.favorite, color: Colors.red)
-                  : const Icon(
-                      Icons.favorite,
-                      color: Colors.grey,
-                    ),
-            ),
+            // IconButton(
+            //   onPressed: () async {
+            //     widget.item.isFav = !widget.item.isFav;
+            //     await widget.item.save();
+            //     setState(() {});
+            //   },
+            //   icon: widget.item.isFav
+            //       ? const Icon(Icons.favorite, color: Colors.red)
+            //       : const Icon(
+            //           Icons.favorite,
+            //           color: Colors.grey,
+            //         ),
+            // ),
           ],
         ),
         Text(
           widget.item.title,
+          maxLines: 2,
           style: const TextStyle(
             color: AppColors.blackColor,
             fontWeight: FontWeight.bold,

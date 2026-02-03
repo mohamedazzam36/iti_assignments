@@ -20,7 +20,7 @@ class CartView extends StatelessWidget {
         centerTitle: true,
       ),
 
-      body: const CartViewBody(),
+      // body: const CartViewBody(),
     );
   }
 }
